@@ -57,7 +57,8 @@ export default function Home() {
 			title: "Netflix Clone",
 			href: "https://github.com/Ritavdas/Netflix_Clone",
 			desc: [
-				"This project aims to replicate Netflix's core features using cutting-edge technologies such as React, NextJS, TailwindCSS, and Prisma.",
+				"This project aims to replicate Netflix's core features and uses.",
+				"The frontend and backend both are managed by Next",
 			],
 			stack: "Next • Tailwind • Mongo • Prisma",
 		},
@@ -67,7 +68,8 @@ export default function Home() {
 			title: "Next Auth",
 			href: "https://github.com/Ritavdas/NextJS-Auth",
 			desc: [
-				"A Next.js project that demonstrates the implementation of Google, GitHub, and custom credential login using the NextAuth.js library with a pretty login page",
+				"A Next.js project that demonstrates the implementation of Google, GitHub, and custom credential login using the NextAuth library",
+				"Has a pretty clean and responsive UI",
 			],
 			stack: "Next • NextAuth • Mongo • Tailwind",
 		},
