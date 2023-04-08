@@ -13,16 +13,16 @@ export default function Home() {
 
 	let Work_Experiences = [
 		{
-			href: "https://lightcast.io/",
-			side: "May 2021 - July 2021",
-			title: "Testing Intern - Lightcast",
+			href: "https://thouc-labs.ai/",
+			side: "July 2022 - Present",
+			title: "FullStack Developer - Thoucentric Labs",
 			desc: [
-				`Executed 30 test cases, ensuring that all scenarios were covered and the software was of high quality.`,
-				`Debugged and ran tests to ensure proper functionality.`,
-				`Wrote test scripts on C# using Selenium for development purposes.`,
-				`Closed 28 bug tickets, ensuring that all issues were tracked and resolved.`,
+				`Made various features involving frontend, backend, and data science aspects, including UI/UX design, data transformation, data analysis, charting, and more using Next.js and Django.`,
+				`Worked on enrichment, processing, cleaning, filtering, of user data using Pandas.`,
+				`Worked on integration of Keycloak for central authentication, involving frontend and token processing using Next.js.`,
+				`Implemented config-based subscriptions using the Django admin panel.`,
 			],
-			stack: "C# • Selenium • JIRA • Git",
+			stack: "Next • Django • Tailwind • Postgres • Redis • Pytest",
 		},
 		{
 			href: "https://thoucentric.com/",
@@ -37,16 +37,16 @@ export default function Home() {
 			stack: "Next • Django • Tailwind • CSS • Plotly",
 		},
 		{
-			href: "https://thouc-labs.ai/",
-			side: "July 2022 - Present",
-			title: "FullStack Developer - Thoucentric Labs",
+			href: "https://lightcast.io/",
+			side: "May 2021 - July 2021",
+			title: "Testing Intern - Lightcast",
 			desc: [
-				`Made various features involving frontend, backend, and data science aspects, including UI/UX design, data transformation, data analysis, charting, and more using Next.js and Django.`,
-				`Worked on enrichment, processing, cleaning, filtering, of user data using Pandas.`,
-				`Worked on integration of Keycloak for central authentication, involving frontend and token processing using Next.js.`,
-				`Implemented config-based subscriptions using the Django admin panel.`,
+				`Executed 30 test cases, ensuring that all scenarios were covered and the software was of high quality.`,
+				`Debugged and ran tests to ensure proper functionality.`,
+				`Wrote test scripts on C# using Selenium for development purposes.`,
+				`Closed 28 bug tickets, ensuring that all issues were tracked and resolved.`,
 			],
-			stack: "Next • Django • Tailwind • Postgres • Redis • Pytest",
+			stack: "C# • Selenium • JIRA • Git",
 		},
 	];
 
