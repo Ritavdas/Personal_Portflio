@@ -3,8 +3,9 @@ import Head from "next/head";
 import { Grid } from "../components/Grid";
 import { Experience } from "../components/Experience";
 import { Avatar } from "../components/Avatar";
-
+import useWindowWidth from "../hooks/Width";
 export default function Home() {
+	const width = useWindowWidth();
 	let introductory_text = `
 	GM, I'm Ritav. I enjoy building dynamic, creative products from
 	start to finish. Aim to approach every problem with a fresh, out-of-the-box perspective. 
@@ -81,7 +82,12 @@ export default function Home() {
 				<title>Ritav Das - FullStack Developer</title>
 			</Head>
 
-			<Box py="115px" px={4} maxWidth={500} mx="auto">
+			<Box
+				py={width > 650 ? "7rem" : "5rem"}
+				px={4}
+				maxWidth={500}
+				mx="auto"
+			>
 				<Grid
 					fluid
 					templateColumns="repeat(4, 1fr)"
@@ -121,14 +127,6 @@ export default function Home() {
 							mb={10}
 						/>
 					))}
-					{/* <Experience
-						href="https://iyk.app"
-						side="2022 - present"
-						title="Senior Frontend Engineer – IYK"
-						desc={["Building the Whole Wide World﹡"]}
-						stack="TS • Next • Nest • Stitches • Mobx • Turbo"
-					/> */}
-
 					<Heading as="h2" size="md" className="mt-14 mb-10">
 						Projects
 					</Heading>
@@ -144,19 +142,6 @@ export default function Home() {
 							mb={10}
 						/>
 					))}
-
-					{/* <Experience
-						href="https://kineticspectru.ms/"
-						image="/nextauth.png"
-						side="2022"
-						title="Kinetic Spectrums"
-						desc={[
-							"Generative on-chain NFTs. A collection of dynamic, ever changing artworks.",
-						]}
-						stack="Solidity • ERC721 • Next.js"
-						mb={10}
-					/> */}
-
 					<Heading as="h2" size="md" mt={14} mb={10}>
 						Links
 					</Heading>

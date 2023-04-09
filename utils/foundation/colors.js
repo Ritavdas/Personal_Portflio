@@ -7,14 +7,12 @@ const generateColourPalette = (baseColor) => {
 
 	const light = lightKeys.reduce(
 		(acc, key, index) => (
-			// eslint-disable-next-line no-sequences
 			(acc[key] = lighten((index + 1) / indexDivider, baseColor)), acc
 		),
 		{}
 	);
 	const dark = darkKeys.reduce(
 		(acc, key, index) => (
-			// eslint-disable-next-line no-sequences
 			(acc[key] = darken((index + 1) / indexDivider, baseColor)), acc
 		),
 		{}
