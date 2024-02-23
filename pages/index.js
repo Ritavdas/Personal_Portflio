@@ -8,14 +8,40 @@ export default function Home() {
 	const width = useWindowWidth();
 	let introductory_text = `
 	GM, I'm Ritav. I enjoy building dynamic, creative products from
-	start to finish. Aim to approach every problem with a fresh, out-of-the-box perspective. 
+	start to finish. Aim to approach every problem with a fresh, out-of-the-box perspective.
 	Hoping to get good at Muay Thai this year , wish me luck.
 	`;
 
 	let Work_Experiences = [
 		{
+			href: "https://betterapp.ai/",
+			side: "October 2023 - Present",
+			title: "FullStack Developer - Betterapp",
+			desc: [
+				`Developed a Chrome extension leveraging React and Webpack to limit time spent on distracting websites,
+				enhancing productivity.`,
+				`Gained proficiency in mobile full-stack development through Android Studio and Kotlin using Jetpack
+				Compose, adhering to clean architecture principles.`,
+				`Developed a Notification Scheduling feature, enabling batch delivery of notifications at user-specified times.
+				Used daily by 2000 users and growing rapidly.`,
+			],
+			stack: "React • Kotlin • Mixpanel • Jetpack Compose • RoomDB",
+		},
+		{
+			href: "https://twitter.com/dasritav/status/1703346151767015890",
+			side: "September 2023 - October 2023",
+			title: "Founder - GetFriendly",
+			desc: [
+				`Developed a platform that connects people with similar interests and hobbies, allowing them to meet and engage in activities together.`,
+				`Conducted user interviews to understand user needs and improve the product accordingly.`,
+				`Designed and developed the product using TypeScript, NextJS, MongoDB and Prisma for ORM`,
+				`Went to Buildspace event in Dubai to showcase and pitch GetFriendly`,
+			],
+			stack: "Next • MongoDB • Tailwind • Prisma • TypeScript",
+		},
+		{
 			href: "https://thouc-labs.ai/",
-			side: "July 2022 - Present",
+			side: "July 2022 - September 2023",
 			title: "FullStack Developer - Thoucentric Labs",
 			desc: [
 				`Made various features involving frontend, backend, and data science aspects, including UI/UX design, data transformation, data analysis, charting, and more using Next.js and Django.`,
@@ -102,7 +128,7 @@ export default function Home() {
 							<Heading as="h1" size="lg">
 								Ritav Das
 							</Heading>
-							<Text>Fullstack Developer</Text>
+							<Text>Fullstack Implementer</Text>
 						</Box>
 					</GridItem>
 				</Grid>
@@ -153,7 +179,19 @@ export default function Home() {
 						mb={4}
 					/>
 					<Experience
+						side="Twitter"
+						title="@dasritav"
+						href="https://twitter.com/dasritav"
+						mb={4}
+					/>
+					<Experience
 						side="Blogs"
+						title="@ritavdas"
+						href="https://substack.com/@ritavdas"
+						mb={4}
+					/>
+					<Experience
+						side="Tech Blogs"
 						title="@ritavdas"
 						href="https://ritavdas.hashnode.dev/"
 						mb={4}
@@ -162,12 +200,6 @@ export default function Home() {
 						side="LinkedIn"
 						title="@ritav-das"
 						href="https://www.linkedin.com/in/ritav-das-76422414a/"
-						mb={4}
-					/>
-					<Experience
-						side="Twitter"
-						title="@dasritav"
-						href="https://twitter.com/dasritav"
 						mb={4}
 					/>
 					<Experience
