@@ -7,7 +7,7 @@ import useWindowWidth from "../hooks/Width";
 export default function Home() {
 	const width = useWindowWidth();
 	let introductory_text = `
-	GM, I'm Ritav. I build things that make money and solve real problems. Over the past 4+ years, I've generated $25K+ in revenue through smart integrations, won India's first Generative AI hackathon, and shipped products used by thousands of people daily. Currently obsessed with AI platforms and e-commerce systems that actually work. When I'm not coding, I'm probably trying to get better at being consistent at the gym.
+	Hey, I'm Ritav. I try a lot of things, most don't work, some do. Currently exploring AI rabbit holes. Last month it was TikTok marketing. Still figuring it all out one experiment at a time. Also pretending to have a gym routine.
 	`;
 
 	let Work_Experiences = [
