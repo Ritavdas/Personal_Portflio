@@ -7,105 +7,82 @@ import useWindowWidth from "../hooks/Width";
 export default function Home() {
 	const width = useWindowWidth();
 	let introductory_text = `
-	GM, I'm Ritav. I enjoy building dynamic, creative products from
-	start to finish. Aim to approach every problem with a fresh, out-of-the-box perspective.
-	Hoping to get good at Muay Thai this year , wish me luck.
+	GM, I'm Ritav. I build things that make money and solve real problems. Over the past 4+ years, I've generated $25K+ in revenue through smart integrations, won India's first Generative AI hackathon, and shipped products used by thousands of people daily. Currently obsessed with AI platforms and e-commerce systems that actually work. When I'm not coding, I'm probably trying to get better at being consistent at the gym.
 	`;
 
 	let Work_Experiences = [
 		{
+			href: "https://apptile.co/",
+			side: "April 2024 - Present",
+			title: "Software Engineer - Apptile",
+			desc: [
+				`Generated over $25K in additional revenue by architecting comprehensive integrations, delivering 10+ critical features while mentoring junior developers.`,
+				`Built enterprise-level systems serving thousands of users across 5+ international markets, with real-time tracking and automation capabilities.`,
+				`Led development of complex Shopify ecosystem integrations that directly impact bottom-line revenue growth.`,
+			],
+			stack: "React • Node.js • Shopify API • TypeScript • Enterprise Systems",
+		},
+		{
+			href: "https://tile.dev/",
+			side: "2024",
+			title: "Founding Engineer - tile.dev (#4 on ProductHunt)",
+			desc: [
+				`Architected a prompt-to-app platform that hit #4 on ProductHunt, building the core AI infrastructure from scratch.`,
+				`Created an in-browser IDE with live previews and automated build pipelines - basically magic for developers.`,
+				`Pioneered sliding window techniques for LLM context management, solving real problems in AI conversation flow.`,
+			],
+			stack: "React • Node.js • AI/LLM • Docker • Monaco Editor",
+		},
+		{
 			href: "https://betterapp.ai/",
-			side: "October 2023 - Present",
+			side: "2023 - 2024",
 			title: "FullStack Developer - Betterapp",
 			desc: [
-				`Developed a Chrome extension leveraging React and Webpack to limit time spent on distracting websites,
-				enhancing productivity.`,
-				`Gained proficiency in mobile full-stack development through Android Studio and Kotlin using Jetpack
-				Compose, adhering to clean architecture principles.`,
-				`Developed a Notification Scheduling feature, enabling batch delivery of notifications at user-specified times.
-				Used daily by 2000 users and growing rapidly.`,
+				`Built a Chrome extension used by 1,500+ daily active users, helping people reclaim their time from digital distractions.`,
+				`Shipped mobile features that boosted the app store rating from 4.3 to 4.5, serving 5,000+ monthly users.`,
+				`Created notification systems that increased engagement by 65% while reducing server load - efficiency meets impact.`,
 			],
-			stack: "React • Kotlin • Mixpanel • Jetpack Compose • RoomDB",
+			stack: "React • Kotlin • Mobile Development • Browser Extensions",
 		},
 		{
-			href: "https://twitter.com/dasritav/status/1703346151767015890",
-			side: "September 2023 - October 2023",
-			title: "Founder - GetFriendly",
+			side: "2021 - 2023",
+			title: "...plus some other exciting ventures along the way",
 			desc: [
-				`Developed a platform that connects people with similar interests and hobbies, allowing them to meet and engage in activities together.`,
-				`Conducted user interviews to understand user needs and improve the product accordingly.`,
-				`Designed and developed the product using TypeScript, NextJS, MongoDB and Prisma for ORM`,
-				`Went to Buildspace event in Dubai to showcase and pitch GetFriendly`,
+				`Worked with innovative startups and established companies, building everything from data pipelines to dealer management platforms.`,
+				`Each experience taught me something new about scaling systems, leading teams, and shipping products that matter.`,
 			],
-			stack: "Next • MongoDB • Tailwind • Prisma • TypeScript",
-		},
-		{
-			href: "https://thouc-labs.ai/",
-			side: "July 2022 - September 2023",
-			title: "FullStack Developer - Thoucentric Labs",
-			desc: [
-				`Made various features involving frontend, backend, and data science aspects, including UI/UX design, data transformation, data analysis, charting, and more using Next.js and Django.`,
-				`Worked on enrichment, processing, cleaning, filtering, of user data using Pandas.`,
-				`Worked on integration of Keycloak for central authentication, involving frontend and token processing using Next.js.`,
-				`Implemented config-based subscriptions using the Django admin panel.`,
-			],
-			stack: "Next • Django • Tailwind • Postgres • Redis • Pytest",
-		},
-		{
-			href: "https://thoucentric.com/",
-			side: "January 2022 - June 2022",
-			title: "FullStack Developer Intern - Thoucentric",
-			desc: [
-				`Improved product features, optimized code, and streamlined processes to enhance user engagement and operational efficiency.`,
-				`Utilized responsive web design and UI to create a seamless user experience.`,
-				`Built a secure and scalable application using Django, Bootstrap, and Plotly, with expertise in fetching data using an API and storing it on MongoDB Atlas.`,
-				`Worked Mahindra project leveraging Next and JS Django.`,
-			],
-			stack: "Next • Django • Tailwind • CSS • Plotly",
-		},
-		{
-			href: "https://lightcast.io/",
-			side: "May 2021 - July 2021",
-			title: "Testing Intern - Lightcast",
-			desc: [
-				`Executed 30 test cases, ensuring that all scenarios were covered and the software was of high quality.`,
-				`Debugged and ran tests to ensure proper functionality.`,
-				`Wrote test scripts on C# using Selenium for development purposes.`,
-				`Closed 28 bug tickets, ensuring that all issues were tracked and resolved.`,
-			],
-			stack: "C# • Selenium • JIRA • Git",
+			stack: "Various Technologies • Continuous Learning • Impact-Driven Development",
 		},
 	];
 
 	let side_projects = [
 		{
-			image: "/netflix.png",
-			side: "2023",
-			title: "Netflix Clone",
-			href: "https://github.com/Ritavdas/Netflix_Clone",
+			side: "2024",
+			title: "Hemingway.Ink - AI Marketing Agent",
+			href: "https://hemingway.ink/",
 			desc: [
-				"This project aims to replicate Netflix's core features and uses.",
-				"The frontend and backend both are managed by Next",
+				"Built an AI-powered writing platform that learns your brand voice and creates marketing content that actually sounds like you wrote it.",
+				"Hit $100 MRR with 50+ active users within the first few months - turns out people really want AI that gets their vibe.",
+				"The platform uses advanced prompt engineering and fine-tuning to create personalized marketing agents that scale your voice, not replace it.",
+				"It's like having a copywriter who studied all your best content and can write in your style on demand.",
 			],
-			stack: "Next • Tailwind • Mongo • Prisma",
+			stack: "Next • OpenAI • Stripe • AI/LLM • Product Strategy",
 		},
 		{
-			image: "/nextauth.png",
-			side: "2023",
-			title: "Next Auth",
-			href: "https://github.com/Ritavdas/NextJS-Auth",
+			side: "Always",
+			title: "...and a few other experiments brewing in the lab",
 			desc: [
-				"A Next.js project that demonstrates the implementation of Google, GitHub, and custom credential login using the NextAuth library",
-				"Has a pretty clean and responsive UI",
+				"From Chrome extensions that went viral to platforms that never saw the light of day - each project teaches me something new.",
+				"Some made money, some made users happy, some just made me a better developer. All were worth building.",
 			],
-			stack: "Next • NextAuth • Mongo • Tailwind",
+			stack: "Curiosity • Rapid Prototyping • Learning by Shipping",
 		},
 	];
 
 	return (
 		<>
 			<Head>
-				<title>Ritav Das - FullStack Developer</title>
+				<title>Ritav Das - Software Engineer</title>
 			</Head>
 
 			<Box
@@ -128,7 +105,7 @@ export default function Home() {
 							<Heading as="h1" size="lg">
 								Ritav Das
 							</Heading>
-							<Text>Fullstack Implementer</Text>
+							<Text>Software Engineer</Text>
 						</Box>
 					</GridItem>
 				</Grid>
