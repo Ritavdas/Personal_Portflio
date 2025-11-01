@@ -3,6 +3,7 @@ import Head from "next/head";
 import { Grid } from "../components/Grid";
 import { Experience } from "../components/Experience";
 import { Avatar } from "../components/Avatar";
+import BlogPost from "../components/BlogPost";
 import useWindowWidth from "../hooks/Width";
 import Parser from "rss-parser";
 import { motion } from "framer-motion";
@@ -166,16 +167,17 @@ export default function Home({ blogPosts }) {
             Writing
           </AnimatedHeading>
           {blogPosts && blogPosts.length > 0 ? (
-            blogPosts.map((post, index) => (
-              <Experience
-                key={index}
-                side={post.date}
-                title={post.title}
-                desc={[post.excerpt]}
-                href={post.link}
-                mb={10}
-              />
-            ))
+            <Box display="flex" flexDirection="column" gap={6}>
+              {blogPosts.map((post, index) => (
+                <BlogPost
+                  key={index}
+                  title={post.title}
+                  excerpt={post.excerpt}
+                  date={post.date}
+                  href={post.link}
+                />
+              ))}
+            </Box>
           ) : (
             <Text mb={10}>No blog posts available at the moment.</Text>
           )}
@@ -238,7 +240,7 @@ export async function getStaticProps() {
         month: "short",
         year: "numeric",
       }),
-      excerpt: item.contentSnippet?.substring(0, 150) + "..." || "",
+      excerpt: item.contentSnippet,
     }));
 
     return {

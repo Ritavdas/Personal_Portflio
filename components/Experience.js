@@ -42,11 +42,11 @@ export const Experience = ({ side, title, desc, stack, image, href, mb }) => {
           )}
         </h3>
         {desc && (
-          <ul className="my-2">
+          <ul className="my-3 space-y-2 pl-5 md:pl-6">
             {desc.map((item, index) => (
               <li
                 key={index}
-                className="list-disc"
+                className="list-disc md:list-disc list-outside leading-relaxed"
                 dangerouslySetInnerHTML={{ __html: item }}
               />
             ))}
