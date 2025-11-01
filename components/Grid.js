@@ -12,7 +12,7 @@ export const gridPx = {
   max: 60,
 };
 
-export function Grid({ children, fluid, ...rest }) {
+export function Grid({ children, fluid = false, ...rest }) {
   return (
     <ChakraGrid
       maxW="1920px"
@@ -27,10 +27,6 @@ export function Grid({ children, fluid, ...rest }) {
     </ChakraGrid>
   );
 }
-
-Grid.defaultProps = {
-  fluid: false,
-};
 
 Grid.propTypes = {
   fluid: PropTypes.bool,

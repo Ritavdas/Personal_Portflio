@@ -4,7 +4,9 @@ import { Grid } from "../components/Grid";
 import { Experience } from "../components/Experience";
 import { Avatar } from "../components/Avatar";
 import useWindowWidth from "../hooks/Width";
-export default function Home() {
+import Parser from "rss-parser";
+
+export default function Home({ blogPosts }) {
 	const width = useWindowWidth();
 	let introductory_text = `
 	Hey, I'm Ritav. I try a lot of things, most don't work, some do. Currently exploring AI rabbit holes. Last month it was TikTok marketing. Still figuring it all out one experiment at a time. Also pretending to have a gym routine.
@@ -86,9 +88,9 @@ export default function Home() {
 			</Head>
 
 			<Box
-				py={width > 650 ? "7rem" : "5rem"}
+				py={width > 768 ? "7rem" : "5rem"}
 				px={4}
-				maxWidth={500}
+				maxWidth={1000}
 				mx="auto"
 			>
 				<Grid
@@ -146,6 +148,23 @@ export default function Home() {
 						/>
 					))}
 					<Heading as="h2" size="md" mt={14} mb={10}>
+						Writing
+					</Heading>
+					{blogPosts && blogPosts.length > 0 ? (
+						blogPosts.map((post, index) => (
+							<Experience
+								key={index}
+								side={post.date}
+								title={post.title}
+								desc={[post.excerpt]}
+								href={post.link}
+								mb={10}
+							/>
+						))
+					) : (
+						<Text mb={10}>No blog posts available at the moment.</Text>
+					)}
+					<Heading as="h2" size="md" mt={14} mb={10}>
 						Links
 					</Heading>
 
@@ -189,4 +208,37 @@ export default function Home() {
 			</Box>
 		</>
 	);
+}
+
+export async function getStaticProps() {
+	try {
+		const parser = new Parser();
+		const feed = await parser.parseURL('https://ritavdas.substack.com/feed');
+
+		// Get the latest 5 blog posts
+		const blogPosts = feed.items.slice(0, 5).map(item => ({
+			title: item.title,
+			link: item.link,
+			date: new Date(item.pubDate).toLocaleDateString('en-US', {
+				month: 'short',
+				year: 'numeric'
+			}),
+			excerpt: item.contentSnippet?.substring(0, 150) + '...' || '',
+		}));
+
+		return {
+			props: {
+				blogPosts,
+			},
+			revalidate: 3600, // Revalidate every hour
+		};
+	} catch (error) {
+		console.error('Error fetching blog posts:', error);
+		return {
+			props: {
+				blogPosts: [],
+			},
+			revalidate: 3600,
+		};
+	}
 }
