@@ -14,7 +14,8 @@ export const Experience = ({ side, title, desc, stack, image, href, mb }) => {
       initial={{ opacity: 0, y: 20 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
-      className={`grid grid-cols-4 gap-4 mb-${mb ? mb : 10} transition-all duration-300 hover:translate-y-[-2px]`}
+      className={`grid grid-cols-4 gap-4 transition-all duration-300 hover:translate-y-[-2px]`}
+      style={{ marginBottom: mb ? mb : 10 }}
     >
       <div className="col-span-4 md:col-span-1">
         <p className="text-white opacity-50">{side}</p>

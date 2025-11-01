@@ -144,7 +144,7 @@ export default function Home({ blogPosts }) {
               title={experience.title}
               desc={experience.desc}
               stack={experience.stack}
-              mb={10}
+              mb={30}
             />
           ))}
           <AnimatedHeading as="h2" size="md" mt={20} mb={10}>
