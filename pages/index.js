@@ -34,7 +34,7 @@ export default function Home({ blogPosts }) {
 
   let Work_Experiences = [
     {
-      href: "https://apptile.co/",
+      href: "https://apptile.com/",
       side: "April 2024 - Present",
       title: "Software Engineer - Apptile",
       desc: [
