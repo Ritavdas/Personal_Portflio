@@ -56,9 +56,9 @@ export default function Home({ blogPosts }) {
       stack: "React • Node.js • AI/LLM • Docker • Monaco Editor",
     },
     {
-      href: "https://betterapp.ai/",
+      href: "https://regainapp.ai/",
       side: "2023 - 2024",
-      title: "FullStack Developer - Betterapp",
+      title: "FullStack Developer - EpowerX Labs",
       desc: [
         `Built a Chrome extension used by <strong>1,500+</strong> daily active users, helping people reclaim their time from digital distractions.`,
         `Shipped mobile features that boosted the app store rating from <strong>4.3 to 4.5</strong>, serving <strong>5,000+</strong> monthly users.`,
